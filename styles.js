@@ -1,4 +1,4 @@
-import { StyleSheet, Dimensions, Platform } from 'react-native';
+import {StyleSheet, Dimensions, Platform, StatusBar} from 'react-native';
 
 const colors = {
     black: '#1a1917',
@@ -22,6 +22,13 @@ export const itemWidth = slideWidth + itemHorizontalMargin * 2;
 export const entryBorderRadius = 8;
 
 export default StyleSheet.create({
+    container: {
+        flex: 1,
+        marginTop: StatusBar.currentHeight || 0,
+        backgroundColor: '#363636',
+        // padding: 16,
+        overflow: 'visible'
+    },
     slideInnerContainer: {
         width: itemWidth,
         height: slideHeight,
